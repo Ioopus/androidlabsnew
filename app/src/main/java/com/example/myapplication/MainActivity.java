@@ -7,13 +7,13 @@ import com.example.myapplication.MainActivityViewModel;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.myapplication.databinding.ActivityMainConstraintBinding;
 import com.google.android.material.snackbar.Snackbar;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityMainConstraintBinding binding;
     boolean ischked;
     String state;
 
@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
-        binding = ActivityMainBinding.inflate( getLayoutInflater() );
+        binding = ActivityMainConstraintBinding.inflate( getLayoutInflater() );
         setContentView(  binding.getRoot() );
 
-        binding.switch1.setOnCheckedChangeListener( (btn, isChecked ) -> {
+        binding.switch2.setOnCheckedChangeListener( (btn, isChecked ) -> {
             if (isChecked) {
                 ischked = true;
                 state = "on";
@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
             }
             viewModel.isSelected.postValue( isChecked );
             Toast.makeText(MainActivity.this, "The switch is now " + state, Toast.LENGTH_LONG).show();
-            Snackbar.make(binding.checkBox, "Undo?", Snackbar.LENGTH_LONG)
+            Snackbar.make(binding.switch2, "Undo?", Snackbar.LENGTH_LONG)
                     .setAction("UNDO", click -> {
                     viewModel.isSelected.postValue(isChecked);
-                    binding.switch1.setChecked(!ischked);
+                    binding.switch2.setChecked(!ischked);
                     }).show();
 
         } );
-        binding.button.setOnClickListener(v -> {
+        binding.button2.setOnClickListener(v -> {
             Toast.makeText(MainActivity.this, this.getString(R.string.toast_message), Toast.LENGTH_LONG).show();
         });
 
