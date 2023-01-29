@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Lab 2 GUI"
+        android:text="@string/text"
         android:textSize="34sp" />
 
     <LinearLayout
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_weight="1"
-        android:text="Check this out" />
+        android:text="@string/check"/>
 
     </LinearLayout>
     <LinearLayout
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Switch on/off" />
+            android:text="@string/switch2" />
 
     </LinearLayout>
 
@@ -63,5 +63,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Enter Name Here" />
+        android:text="@string/name" />
 </LinearLayout>
