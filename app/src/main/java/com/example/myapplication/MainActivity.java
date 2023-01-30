@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainConstraintBinding binding;
     boolean ischked;
     String state;
-
     MainActivityViewModel viewModel;
-    @Override  //This starts the application
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
