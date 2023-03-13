@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello_message">Bonjour</string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="text">Interface graphique du laboratoire 2</string>
+    <string name="button">Cliquez ici</string>
+    <string name="toast_message">Voici plus dinformations</string>
+    <string name="name">Entrez le nom ici</string>
+    <string name="switch2">Allumer / eteindre</string>
+    <string name="check">Regarde ca</string>
 </resources>
